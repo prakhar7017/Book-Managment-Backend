@@ -21,6 +21,7 @@ exports.postSignup = async (req, res) => {
     }
 
     const userExist = await User.findOne({ email });
+    console.log(userExist)
 
     if (userExist) {
       return res.status(400).json({
